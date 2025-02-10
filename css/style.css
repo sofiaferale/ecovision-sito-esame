@@ -1,0 +1,614 @@
+/* Reset */
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "jost", sans-serif;
+    
+}
+
+/* Header */
+header {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Logo a sinistra, menu a destra */
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo + Freccia (cliccabili insieme) */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Stile Freccia */
+.freccia1 img {
+    max-width: 20px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Stile Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff;
+    
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* Menu di navigazione */
+.nav-links {
+    display: flex;
+    gap: 1.5vw; /* Spazio tra i link */
+    white-space: nowrap;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Menu Toggle (per dispositivi mobili) */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+    margin-top: -50px;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px; /* Ridurre il padding per schermi più piccoli */
+        flex-direction: column; /* Cambia la direzione in colonna */
+        align-items: flex-start; /* Allinea a sinistra */
+    }
+
+    /* Logo e Freccia */
+    .logo-container {
+        margin-bottom: 10px; /* Aggiungi margine tra logo e menu */
+        margin-top: 10px;
+    }
+
+    /* Menu di navigazione */
+    .nav-links {
+        flex-direction: column; /* Dispone il menu in colonna */
+        gap: 1rem; /* Riduci lo spazio tra i link */
+        align-items: center; /* Centra i link */
+        width: 100%; /* Il menu prende tutta la larghezza */
+        margin-top: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 16px; /* Aumenta la dimensione dei link su mobile */
+    }
+
+    /* Mostra il menu toggle su dispositivi mobili */
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none; /* Nasconde il menu */
+    }
+
+    /* Mostra il menu quando il toggle è attivato */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+}
+
+body {
+    background-color: #f7f0e4;
+    margin: 0;
+    font-family: "jost", sans-serif;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+.hero .text {
+    position: absolute;
+    right: 10vw; /* Usa unità relative per la posizione */
+    top: 55%;
+    transform: translateY(-50%);
+    margin: 0; /* Rimuove il margine che può creare problemi */
+    
+    color: #006B4F;
+    padding: 2vw 4vw; /* Adatta il padding allo schermo */
+    border-radius: 3vw;
+    max-width: 40vw; /* Impedisce che diventi troppo largo */
+    width: auto; /* Permette al contenuto di adattarsi */
+    white-space: nowrap;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ 
+
+.hero .text p {
+    font-size: 4vw; /* Anche il testo si adatta */
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+
+
+/* Contenuto Principale */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: left; /* Centra orizzontalmente */
+    padding: 2vw 0vw; /* Adatta lo spazio ai lati */
+    text-align: left;
+}
+
+/* Titolo principale */
+h2 {
+    font-size: 3vw; /* Adatta la dimensione del titolo */
+    font-weight: bold;
+    margin-bottom: 6vw;
+    margin-top: -4vw;
+}
+
+/* Paragrafi */
+p {
+    font-size: 2.2vw; /* Si ridimensiona con lo schermo */
+    max-width: 80vw; /* Impedisce che il testo diventi troppo largo */
+    line-height: 1.2;
+    text-align: left; /* Mantiene leggibilità */
+    margin-bottom: 2vw;
+}
+
+/* Separatore */
+.separator {
+    width: 30vw; /* Adatta la larghezza al viewport */
+    height: 2px;
+    background: darkred;
+    margin: 2vw auto;
+}
+
+/* Wrapper principale */
+.main-wrapper {
+    padding: 5vw; /* Usa unità relative per un migliore adattamento */
+}
+.evidenziato{
+    color: red;
+    font-weight: bold;
+}
+
+/* Sezioni */
+
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    position: relative; /* Importante per posizionare il testo sopra */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+    border-radius: 10px; /* Angoli arrotondati */
+}
+
+.box-image h3 {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    
+  
+}
+
+
+
+/* Footer */ù
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
+    min-height: calc(100vh - 150vh);
+    padding-bottom: 50px;
+    
+    
+
+}
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    height: auto; /*grandezza blocco footer*/
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    
+    
+}
+
+
+.social-icons {
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%; 
+    padding: 30px;
+    display: flex;
+    gap: 20%;
+    font-size: 20px;
+    margin: 0px 20px;
+    cursor: pointer;
+  
+}
+.social-icons img {
+    width: 70px;
+    height: auto;
+}
+
+
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media screen and (min-width:1000px) {
+    .text-6 {
+       top: 55%;
+    }
+
+ 
+}
+
+@media screen and (max-width: 768px) {
+  
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 80%;
+    }
+
+    .hero-text {
+        margin: 20px 0 0 0;
+    }
+    .text-6 {
+        top: 35%;
+        width: 100%;
+        
+        
+    }
+     .text-5 {
+        width: 20px;
+    }
+}
+
+
+seconda pagina
+
+.hero-2 {
+    position: relative;
+}
+
+.hero-2 img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.text-2 {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: #FBD5F6;
+    padding: 2vw 4vw; /* Adatta il padding */
+    border-radius: 1vw;
+    max-width: 80%; /* Impedisce che diventi troppo largo */
+    width: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 3vw; /* Si ridimensiona dinamicamente */
+}
+
+.megafono {
+    margin-bottom: -12%;
+}
+
+
+terza pagina
+
+.hero-3 {
+    position: relative;
+}
+
+.hero-3 img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.text-3 {
+    position: absolute;
+    top: 50%; /* Cambia questo valore per spostare la scritta in alto o in basso */
+    left: 50%; /* Centra il testo orizzontalmente */
+    transform: translate(-50%, -50%); /* Mantiene il centro esatto */
+    
+    
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hero .text-2 h30 {
+    color: #d4ffce;
+    font-size: 5.2vw; /* Si ridimensiona dinamicamente */
+    font-weight: bold;
+    margin-bottom: 1vw;
+    
+}
+
+quarta pagina
+.hero-4 {
+    position: relative;
+}
+
+.hero-4 img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.text-4 {
+    position: absolute;
+    top: 50%; /* Cambia questo valore per spostare la scritta in alto o in basso */
+    left: 50%; /* Centra il testo orizzontalmente */
+    transform: translate(-50%, -50%); /* Mantiene il centro esatto */
+    
+    color: #F3CD56;
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hero .text-2 h40 {
+    color: #F3CD56;
+    font-size: 5vw; /* Si ridimensiona dinamicamente */
+    font-weight: bold;
+    margin-bottom: 1vw;
+    
+}
+
+Quinta pagina
+
+
+.text-5 {
+    position: absolute;
+    top: 50%; /* Cambia questo valore per spostare la scritta in alto o in basso */
+    left: 50%; /* Centra il testo orizzontalmente */
+    transform: translate(-50%, -50%); /* Mantiene il centro esatto */
+    
+    color: #37C1EA;
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hero .text-2 h50 {
+    color: #37C1EA;
+    font-size: 5vw; /* Si ridimensiona dinamicamente */
+    font-weight: bold;
+    margin-bottom: 1vw;
+    
+}
+
+.grid-container200 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.box200 {
+    width: 250px;
+    height: 250px;
+    position: relative; /* Importante per posizionare il testo sopra */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    
+}
+
+.box-image200 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.box-image200 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+    border-radius: 10px; /* Angoli arrotondati */
+}
+
+.box-image200 h3 {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #262626;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.megafono5 img {
+     width: 100%;
+     height: auto;
+     display: block;
+     margin-bottom: -6vw;
+     
+}
+
+
+sesta/settima/ottava/nona pagina
+.hero-6 {
+    position: relative;
+    width: 100%;
+    height: 700%;
+}
+.hero-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-6 {
+    position: absolute;
+    top: 20%; /* Cambia questo valore per spostare la scritta in alto o in basso */
+    left: 50%; /* Centra il testo orizzontalmente */
+    transform: translate(-50%, -50%); /* Mantiene il centro esatto */
+    
+    color: #F89500; 
+    text-align: center;
+    width: 80%;
+    transition: top 0.5s linear;
+}
+
+.hero .text-2 h60 {
+    color: #F89500;
+    font-size: 5vw; /* Si ridimensiona dinamicamente */
+    font-weight: bold;
+    margin-bottom: 1vw;
+    
+}
+
+
+
+
+
