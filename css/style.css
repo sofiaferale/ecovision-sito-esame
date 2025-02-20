@@ -3,8 +3,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "jost", sans-serif;
+    font-family: "Jost", sans-serif;
     
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../font/Jost-400-Book.otf'),
+         url('../font/Jost-400-Book.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../font/Jost-700-Bold.otf'),
+         url('../font/Jost-700-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
 }
 
 /* Header */
@@ -131,7 +147,7 @@ nav {
 }
 
 body {
-    background-color: #f7f0e4;
+    background-color: #F7EEDD; 
     margin: 0;
     font-family: "jost", sans-serif;
     
@@ -161,19 +177,17 @@ img {
     max-width: 40vw; /* Impedisce che diventi troppo largo */
     width: auto; /* Permette al contenuto di adattarsi */
     white-space: nowrap;
-    
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-weight: bolder;
 }
  
 
 .hero .text p {
-    font-size: 4vw; /* Anche il testo si adatta */
-    font-weight: bold;
+    font-size: 4vw; /* Anche il testo si adatta */ 
     line-height: 1.5;
     margin: 0;
 }
@@ -195,19 +209,19 @@ main {
 
 /* Titolo principale */
 h2 {
-    font-size: 3vw; /* Adatta la dimensione del titolo */
+     /* Adatta la dimensione del titolo */
     font-weight: bold;
     margin-bottom: 6vw;
-    margin-top: -4vw;
+    margin-top: 3vw;
 }
 
 /* Paragrafi */
-p {
-    font-size: 2.2vw; /* Si ridimensiona con lo schermo */
+.testo-p {
+     /* Si ridimensiona con lo schermo */
     max-width: 80vw; /* Impedisce che il testo diventi troppo largo */
     line-height: 1.2;
     text-align: left; /* Mantiene leggibilità */
-    margin-bottom: 2vw;
+    
 }
 
 /* Separatore */
@@ -220,7 +234,10 @@ p {
 
 /* Wrapper principale */
 .main-wrapper {
-    padding: 5vw; /* Usa unità relative per un migliore adattamento */
+    font-size: clamp(2vw, 3vw, 20px);
+    padding: 6vw; /* Usa unità relative per un migliore adattamento */
+    margin-bottom: 1vw;
+    
 }
 .evidenziato{
     color: red;
@@ -573,6 +590,7 @@ Quinta pagina
      height: auto;
      display: block;
      margin-bottom: -6vw;
+     
      
 }
 
